@@ -123,7 +123,7 @@ h1 {
   margin: 0 auto;
   text-align: center;
   color: #fff;
-  margin-bottom: 48px;
+  margin-bottom: 24px;
   line-height: 1.07143;
   letter-spacing: 0.02em;
   max-width: 496px;
@@ -132,7 +132,7 @@ h1 {
 .first-section {
   background-color: #fa0909;
 
-  padding: 150px 0;
+  padding: 120px 0 30px 0;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -142,6 +142,7 @@ h1 {
 }
 
 /* =================ДРУГА СЕКЦІЯ НАПРЯМКИ================= */
+
 .second-section {
   background-color: red;
 }
@@ -152,16 +153,22 @@ h1 {
 .directions-div {
   width: 264px;
   height: 380px;
+  display: flex;
+  justify-content: center; /* вирівнює по горизонталі */
 }
-
 .directions {
+  font-size: 2rem;
+  font-weight: bold;
+  display: block;
+  width: max-content;
+  padding: 15px 40px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.984); /* напівпрозорий фон */
+  color: #fd081c;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* м’яка тінь */
+  backdrop-filter: blur(6px); /* ефект "скляної плашки" */
+  margin: 0 auto 50px; /* відцентровка */
   text-align: center;
-  color: #fff;
-  font-size: 35px;
-  font-weight: 500;
-  line-height: 1.2;
-  margin-bottom: 20px;
-  margin-top: 30px;
 }
 
 /* Сітка сервісів */
