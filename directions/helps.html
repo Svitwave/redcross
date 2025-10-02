@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    
+    <style>.donate-section {
+  padding: 60px 20px;
+  background: #fff8f8;
+}
+
+.donate-title {
+  font-size: 32px;
+  text-align: center;
+  margin-bottom: 10px;
+  color: #b40000;
+}
+
+.donate-subtitle {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 18px;
+  color: #444;
+}
+
+.donate-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.donate-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: transform 0.2s ease;
+}
+
+.donate-card:hover {
+  transform: translateY(-3px);
+}
+
+.donate-card h3 {
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.copy-btn {
+  margin-bottom: 10px;
+  padding: 8px 14px;
+  background: #b40000;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.copy-btn:hover {
+  background: #8f0000;
+}
+
+.qr-code {
+  margin-top: 10px;
+  max-width: 150px;
+  border: 2px solid #eee;
+  border-radius: 8px;
+}
+.back-button {
+        display: inline-block;
+        background-color: #e31837;
+        color: white;
+        padding: 1rem 2rem;
+        border-radius: 25px;
+        text-decoration: none;
+        margin-top: 2rem;
+        transition: background-color 0.3s;
+      }
+      .back-button:hover {
+        background-color: #8f0000;
+      }
+      .text-center {
+        text-align: center;
+      }
+</style>
+
+</style>
+  </head>
+  <body>
+    <section id="donate" class="donate-section">
+      <div class="container">
+        <h2 class="donate-title">Підтримайте нашу організацію</h2>
+        <p class="donate-subtitle">
+          Кожна ваша гривня допомагає нам робити більше добрих справ 💙💛
+        </p>
+
+        <div class="donate-grid">
+          <!-- Карточка -->
+          <div class="donate-card">
+            <h3>Реквізити (UAH)</h3>
+            <p>
+              <strong>Назва організації:</strong> Товариство Червоного Хреста
+            </p>
+            <p><strong>ЄДРПОУ:</strong> 12345678</p>
+            <p><strong>IBAN:</strong> UA12 3456 7890 1234 5678 9012 3456</p>
+            <p><strong>Банк:</strong> ПриватБанк</p>
+            <button
+              class="copy-btn"
+              onclick="copyText('UA12 3456 7890 1234 5678 9012 3456')"
+            >
+              Скопіювати IBAN
+            </button>
+          </div>
+
+          <div class="donate-card">
+            <h3>Міжнародні перекази (USD/EUR)</h3>
+            <p><strong>IBAN:</strong> UA98 7654 3210 9876 5432 1098 7654</p>
+            <p><strong>SWIFT:</strong> PBANUA2X</p>
+            <p><strong>Банк:</strong> PrivatBank, Ukraine</p>
+            <button
+              class="copy-btn"
+              onclick="copyText('UA98 7654 3210 9876 5432 1098 7654')"
+            >
+              Скопіювати IBAN
+            </button>
+          </div>
+
+          <div class="donate-card">
+            <h3>Швидкий переказ</h3>
+            <p>Скануйте QR-код у додатку банку:</p>
+            <img
+              src="images/qr-donate.png"
+              alt="QR для переказу"
+              class="qr-code"
+            />
+          </div>
+          
+        </div>
+         <div class="text-center">
+          <a href="../index.html" class="back-button"
+            >Повернутися на головну</a
+          >
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
