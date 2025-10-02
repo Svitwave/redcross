@@ -42,8 +42,6 @@ body {
 
 /* Стилі для шапки сайту */
 .page-header {
-  /* margin-bottom: 1rem;
-  padding: 1rem 0; */
   border-bottom: 1px solid #e5e5e5;
   padding-top: 10px; /* зменшити відступи */
   padding-bottom: 10px;
@@ -83,9 +81,7 @@ h1 {
 }
 
 .logo img {
-  /* max-width: 100px;
-  height: auto; */
-  width: 70px; /* зменшити розмір логотипу */
+  width: 70px;
   height: 70px;
 }
 
@@ -144,6 +140,7 @@ h1 {
   margin-left: auto;
   margin-right: auto;
 }
+
 /* =================ДРУГА СЕКЦІЯ НАПРЯМКИ================= */
 .second-section {
   background-color: red;
@@ -212,6 +209,7 @@ h1 {
   cursor: pointer;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
+
 .service-card-link:hover .service-card {
   transform: translateY(-5px);
   cursor: pointer;
