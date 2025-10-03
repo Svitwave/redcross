@@ -439,6 +439,27 @@ button:hover {
   font-size: 14px;
 }
 
+.footer-map a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-map a:hover {
+  color: #ffd1d1;
+  text-decoration: underline;
+}
+
+.footer-map i {
+  margin-right: 6px;
+  color: #ffd1d1;
+}
+.footer-social i {
+  margin-right: 6px;
+}
+
+/* ---------     helps ----------*/
+
 .copy-toast {
   position: fixed;
   bottom: 30px;
