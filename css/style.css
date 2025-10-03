@@ -43,15 +43,15 @@ body {
 /* Стилі для шапки сайту */
 .page-header {
   border-bottom: 1px solid #e5e5e5;
-  padding-top: 10px; /* зменшити відступи */
-  padding-bottom: 10px;
+  padding-top: 4px; /* зменшити відступи */
+  padding-bottom: 4px;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   bottom: auto;
   background-color: var(--background-color);
-  z-index: 500; /* щоб шапка була поверх інших елементів */
+  z-index: 500;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* легка тінь для шапки */
 }
 
@@ -81,8 +81,8 @@ h1 {
 }
 
 .logo img {
-  width: 70px;
-  height: 70px;
+  width: 50px;
+  height: 50px;
 }
 
 /* Стилі для навігаційного списку */
