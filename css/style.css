@@ -27,7 +27,7 @@ a {
 body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
-  background-color: red; /* Змінено на червоний для тестування */
+  background-color: rgb(249, 19, 19); /* Змінено на червоний для тестування */
   color: #212121; /* Темний колір тексту */
 }
 
@@ -45,11 +45,11 @@ body {
   border-bottom: 1px solid #e5e5e5;
   padding-top: 4px; /* зменшити відступи */
   padding-bottom: 4px;
-  position: fixed;
+  /* position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  bottom: auto;
+  bottom: auto; */
   background-color: var(--background-color);
   z-index: 500;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* легка тінь для шапки */
@@ -101,6 +101,7 @@ h1 {
   justify-content: flex-end;
   gap: 40px;
   transition-property: color, background-color;
+  padding-bottom: 2px;
 }
 
 .nav-list a {
@@ -118,7 +119,7 @@ h1 {
   color: #b40000;
   background-size: 100% 2px;
 }
-.first-section-tittle {
+.first-section-title {
   display: block;
   margin: 0 auto;
   text-align: center;
@@ -130,13 +131,14 @@ h1 {
 }
 
 .first-section {
-  background-color: #fa0909;
-
+  /* background-color: #fa0909; */
+  background-color: rgb(249, 19, 19);
   padding: 120px 0 30px 0;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  max-width: 1500px;
+  width: 100%;
+  /* max-width: 1500px; */
   margin-left: auto;
   margin-right: auto;
 }
@@ -188,14 +190,23 @@ h1 {
   padding: 2rem;
   text-align: center;
   transition: transform 0.3s ease;
-  box-shadow: inset 2px 2px 4px rgba(255, 0, 0, 0.5);
+  /* box-shadow: inset 2px 2px 4px rgba(255, 0, 0, 0.5); */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+
   display: flex;
   flex-direction: column;
   height: 100%;
 }
+
+/* Заголовок в картці */
+
 .service-card h3 {
+  color: red;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
   min-height: 3em;
-} /* зарезервувати місце під 2 рядки заголовка */
+}
+/* зарезервувати місце під 2 рядки заголовка */
 .services-grid {
   align-items: stretch;
 }
@@ -230,13 +241,6 @@ h1 {
   object-fit: cover; /* Зберегти пропорції зображення */
   display: block;
   border-radius: 4px;
-}
-
-/* Заголовок в картці */
-.service-card h3 {
-  color: red;
-  font-size: 1.1rem;
-  margin-bottom: 1rem;
 }
 
 /* Загальні стилі для кнопок */
@@ -375,6 +379,7 @@ button:hover {
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 30px;
   margin-bottom: 20px;
+  align-items: start;
 }
 
 .site-footer h3,
