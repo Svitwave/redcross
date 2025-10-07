@@ -1,0 +1,157 @@
+/* Адаптивні стилі для мобільних пристроїв */
+
+@media (max-width: 768px) {
+  /* Показує бургер кнопку на мобільних */
+  .burger-menu-btn {
+    display: flex !important;
+  }
+
+  /* Ховає звичайне меню на мобільних */
+  .nav-bar {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--background-color);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: right 0.3s ease;
+    z-index: 1000;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Показує меню коли воно відкрите */
+  .nav-bar.active {
+    right: 0;
+  }
+
+  /* Стилі для мобільного меню */
+  .nav-list {
+    flex-direction: column;
+    gap: 30px;
+    text-align: center;
+  }
+
+  .nav-list li {
+    margin: 0;
+  }
+
+  .nav-link {
+    font-size: 1.5rem;
+    padding: 15px 30px;
+    display: block;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+  }
+
+  .nav-link:hover {
+    background-color: rgba(227, 24, 55, 0.1);
+    transform: translateY(-2px);
+  }
+
+  /* Зменшує розмір логотипу на мобільних */
+  .logo img {
+    width: 40px;
+    height: 40px;
+  }
+
+  /* Адаптує контейнер хедера */
+  .page-header .container {
+    padding: 0 1rem;
+  }
+
+  /* Адаптує заголовки */
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  .first-section-title {
+    font-size: 1.8rem;
+  }
+
+  /* Адаптує сітку сервісів */
+  .services-grid {
+    grid-template-columns: 1fr;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    gap: 1.5rem;
+  }
+
+  /* Адаптує секцію волонтерів */
+  .join-team {
+    margin: 40px 10px;
+    padding: 60px 15px;
+  }
+
+  .join-team h2 {
+    font-size: 1.8rem;
+  }
+
+  /* Адаптує секцію пожертв */
+  .donation-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .donation-qr img {
+    width: 180px;
+    height: 180px;
+  }
+
+  /* Адаптує футер */
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    text-align: center;
+  }
+}
+
+/* Медіа-запити для дуже маленьких екранів */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  .first-section-title {
+    font-size: 1.5rem;
+  }
+
+  .directions {
+    font-size: 1.5rem;
+    padding: 10px 20px;
+  }
+
+  .join-team h2 {
+    font-size: 1.5rem;
+  }
+
+  .donation-text h2 {
+    font-size: 1.5rem;
+  }
+
+  .nav-link {
+    font-size: 1.3rem;
+    padding: 12px 25px;
+  }
+}
+
+/* Додаткові стилі для затемнення фону */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+.overlay.active {
+  opacity: 1;
+  visibility: visible;
+}

@@ -1,9 +1,9 @@
 /* Головні кольори сайту */
 :root {
   --primary-color: #e31837; /* Основний червоний колір */
-  --secondary-color: #ffd100; /* Додатковий жовтий колір */
-  --background-color: #fdf5e6; /* Ніжний молочний колір фону */
-  --text-color: white; /* Колір тексту */
+  --secondary-color: #ffd100;
+  --background-color: #fdf5e6;
+  --text-color: white;
 }
 ul,
 ol {
@@ -27,8 +27,8 @@ a {
 body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
-  background-color: rgb(249, 19, 19); /* Змінено на червоний для тестування */
-  color: #212121; /* Темний колір тексту */
+  background-color: rgb(249, 19, 19);
+  color: #212121;
 }
 
 /* Основний контейнер сторінки */
@@ -91,8 +91,42 @@ h1 {
   font-style: normal;
   align-items: flex-end;
   justify-content: flex-end;
-
   gap: 40px;
+}
+
+/* Бургер кнопка */
+.burger-menu-btn {
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30px;
+  height: 30px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 1001;
+}
+
+.burger-line {
+  width: 100%;
+  height: 3px;
+  background-color: #333;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* Анімація бургер кнопки при відкритті */
+.burger-menu-btn.active .burger-line:nth-child(1) {
+  transform: rotate(45deg) translate(6px, 6px);
+}
+
+.burger-menu-btn.active .burger-line:nth-child(2) {
+  opacity: 0;
+}
+
+.burger-menu-btn.active .burger-line:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
 }
 
 .nav-list {
@@ -156,7 +190,7 @@ h1 {
   width: 264px;
   height: 380px;
   display: flex;
-  justify-content: center; /* вирівнює по горизонталі */
+  justify-content: center;
 }
 .directions {
   font-size: 2rem;
@@ -165,9 +199,9 @@ h1 {
   width: max-content;
   padding: 15px 40px;
   border-radius: 12px;
-  background: rgba(255, 255, 255, 0.984); /* напівпрозорий фон */
+  background: rgba(255, 255, 255, 0.984);
   color: #fd081c;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* м’яка тінь */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(6px); /* ефект "скляної плашки" */
   margin: 0 auto 50px; /* відцентровка */
   text-align: center;
@@ -190,7 +224,6 @@ h1 {
   padding: 2rem;
   text-align: center;
   transition: transform 0.3s ease;
-  /* box-shadow: inset 2px 2px 4px rgba(255, 0, 0, 0.5); */
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 
   display: flex;
@@ -211,8 +244,6 @@ h1 {
   align-items: stretch;
 }
 
-/* Посилання в картці сервісу */
-
 /* робить картку однакової висоти і вирівнює контент */
 .service-link {
   display: block;
@@ -221,7 +252,6 @@ h1 {
   color: inherit;
 }
 
-/* Ефект наведення на картку */
 .service-card:hover {
   transform: translateY(-19px);
   cursor: pointer;
@@ -236,7 +266,7 @@ h1 {
 /* Зображення в картці */
 .service-card img {
   width: 100%;
-  height: 250px; /* Задати висоту для зображення */
+  height: 250px;
   margin-bottom: 1.5rem;
   object-fit: cover; /* Зберегти пропорції зображення */
   display: block;
@@ -255,7 +285,6 @@ button {
   transition: background-color 0.3s ease;
 }
 
-/* Ефект наведення на кнопку */
 button:hover {
   background-color: #c41530;
 }
@@ -302,7 +331,7 @@ button:hover {
 
 /*----------- СЕКЦІЯ ПІДТРИМАТИ-------------*/
 .donation-section {
-  background: #222; /* темний фон для контрасту */
+  background: #222;
   color: #fff;
   padding: 60px 20px;
 }
@@ -324,7 +353,7 @@ button:hover {
 .donation-text h2 {
   font-size: 2rem;
   margin-bottom: 20px;
-  color: #ffd100; /* акцентний колір */
+  color: #ffd100;
 }
 
 .donation-text p {
@@ -486,4 +515,46 @@ button:hover {
 }
 .copy-toast.error {
   background: #d9534f;
+}
+
+/* ----------- Прихований заголовок-----------*/
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  border: 0;
+}
+
+/* ----------- Модальне вікно -----------*/
+.modal-nav {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  max-width: 400px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.modal-nav a {
+  display: block;
+  color: #222;
+  font-size: 1.2rem;
+  padding: 1rem;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  transition: background 0.2s, transform 0.1s;
+}
+
+.modal-nav a:last-child {
+  border-bottom: none;
+}
+
+.modal-nav a:active {
+  background: rgba(227, 24, 55, 0.1);
+  transform: scale(0.97);
 }

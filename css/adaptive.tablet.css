@@ -1,0 +1,203 @@
+/* Адаптивні стилі для планшетів (768px - 1024px) */
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  /* Ховає бургер кнопку на планшетах */
+  .burger-menu-btn {
+    display: none !important;
+  }
+
+  /* Показуємо звичайне меню на планшетах */
+  .nav-bar {
+    position: static !important;
+    right: auto !important;
+    width: auto !important;
+    height: auto !important;
+    background-color: transparent !important;
+    flex-direction: row !important;
+    justify-content: flex-end !important;
+    align-items: flex-end !important;
+    box-shadow: none !important;
+  }
+
+  .nav-list {
+    flex-direction: row-reverse !important;
+    gap: 25px !important;
+  }
+
+  .nav-link {
+    font-size: 1rem !important;
+    padding: 8px 15px !important;
+    border-radius: 4px !important;
+  }
+
+  /* Адаптує контейнер */
+  .container {
+    max-width: 900px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  /* Адаптує хедер */
+  .page-header .container {
+    padding: 0 1.5rem;
+  }
+
+  .logo img {
+    width: 45px;
+    height: 45px;
+  }
+
+  /* Адаптує заголовки */
+  h1 {
+    font-size: 3.5rem;
+  }
+
+  .first-section-title {
+    font-size: 2.2rem;
+  }
+
+  .first-section {
+    padding: 100px 0 25px 0;
+  }
+
+  /* Адаптує сітку сервісів для планшетів */
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.8rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  .service-card {
+    padding: 1.5rem;
+  }
+
+  .service-card h3 {
+    font-size: 1rem;
+  }
+
+  .service-card img {
+    height: 200px;
+  }
+
+  /* Адаптує секцію волонтерів */
+  .join-team {
+    margin: 50px 20px;
+    padding: 70px 20px;
+  }
+
+  .join-team h2 {
+    font-size: 2rem;
+  }
+
+  .join-team p {
+    font-size: 1rem;
+  }
+
+  /* Адаптує секцію пожертв */
+  .donation-container {
+    gap: 30px;
+  }
+
+  .donation-text h2 {
+    font-size: 1.8rem;
+  }
+
+  .donation-qr img {
+    width: 200px;
+    height: 200px;
+  }
+
+  /* Адаптує футер */
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+  }
+
+  .site-footer {
+    padding: 35px 20px 15px;
+  }
+
+  /* Адаптує напрямки */
+  .directions {
+    font-size: 1.8rem;
+    padding: 12px 30px;
+  }
+}
+
+/* Додаткові стилі для планшетів у ландшафтній орієнтації */
+@media (min-width: 769px) and (max-width: 1024px) and (orientation: landscape) {
+  .first-section {
+    padding: 80px 0 20px 0;
+  }
+
+  h1 {
+    font-size: 3rem;
+  }
+
+  .first-section-title {
+    font-size: 2rem;
+  }
+
+  .services-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Стилі для середніх планшетів (769px - 900px) */
+@media (min-width: 769px) and (max-width: 900px) {
+  .nav-list {
+    gap: 20px !important;
+  }
+
+  .nav-link {
+    font-size: 0.95rem !important;
+    padding: 6px 12px !important;
+  }
+
+  .container {
+    max-width: 800px;
+  }
+
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .service-card {
+    padding: 1.2rem;
+  }
+
+  .service-card img {
+    height: 180px;
+  }
+}
+
+/* Стилі для великих планшетів (901px - 1024px) */
+@media (min-width: 901px) and (max-width: 1024px) {
+  .nav-list {
+    gap: 30px !important;
+  }
+
+  .nav-link {
+    font-size: 1.05rem !important;
+    padding: 10px 18px !important;
+  }
+
+  .container {
+    max-width: 950px;
+  }
+
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+
+  .service-card {
+    padding: 1.8rem;
+  }
+
+  .service-card img {
+    height: 220px;
+  }
+}

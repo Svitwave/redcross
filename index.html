@@ -17,6 +17,8 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/0.7.0/modern-normalize.min.css"
     />
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/adaptive.tablet.css" />
+    <link rel="stylesheet" href="css/adaptive.mobil.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
   </head>
@@ -32,7 +34,15 @@
             height="100"
           />
         </div>
-        <nav class="nav-bar">
+        
+        <!-- Бургер кнопка -->
+        <button class="burger-menu-btn" id="burgerMenuBtn" aria-label="Відкрити меню">
+          <span class="burger-line"></span>
+          <span class="burger-line"></span>
+          <span class="burger-line"></span>
+        </button>
+        
+        <nav class="nav-bar" id="navBar">
           <ul class="nav-list">
              <li><a class="nav-link" href="#footer">Контакти</a></li>
             <!-- <li><a class="nav-link" href="./index.html">Напрямки</a></li> -->
@@ -51,6 +61,7 @@
           <h1 class="first-section-title">
             Володимирська районна організація ТЧХУ.
           </h1>
+          <h1 class="visually-hidden">Червоний Хрест Володимир</h1>
           <h2 class="first-section-title">Ми поруч коли найважче!</h2>
         </div>
         
@@ -58,10 +69,10 @@
 
       
 
-      <!-- Головний контейнер для решти вмісту -->
-      <h2 class="directions">Наші напрямки</h2>
+     
+     <div> <h2 class="directions">Наші напрямки</h2></div>
    
-
+ <!-- Головний контейнер для решти вмісту -->
       <section class="services-section">
         
         <!-- Сітка сервісів -->
@@ -74,7 +85,7 @@
             </div>
           </a>
 
-          <!-- Картка: Догляд вдома (з посиланням) -->
+          <!-- Картка: Догляд вдома  -->
           <a href="directions/home-care.html" class="service-link">
             <div class="service-card">
               <img src="images/home-care2.jpg" alt="Догляд вдома" />
@@ -215,10 +226,10 @@
   <div class="container footer-grid">
 
     <!-- Лого + короткий опис -->
-    <div class="footer-about">
+    <!-- <div class="footer-about">
       <h3>RedCross</h3>
       <p>Ми допомагаємо людям у скрутних ситуаціях. Долучайтесь до підтримки ❤️</p>
-    </div>
+    </div> -->
 
     <!-- Навігація / соцмережі -->
     <div class="footer-social">
@@ -230,21 +241,22 @@
     </div>
 
     <!-- Контакти -->
-    <div class="footer-contacts">
+    <address class="footer-contacts">
       <h4>Контакти</h4>
       <p>📞 <a href="tel:+380682104303">+380682104303</a></p>
       <p>✉️ <a href="mailto:redcross@email.com">redcross@gmail.com</a></p>
-    </div>
+    </address>
 
     <!-- Мапа -->
-    <div class="footer-map">
-      <h4>Ми на карті</h4>
+    
+    <address class="footer-map">
+       <h4>Наша адреса</h4>
        <p><i class="fas fa-map-marker-alt"></i> <a href="https://maps.app.goo.gl/nr77bxtT7NHapcme6" target="_blank">м.Володимир, вул.Олени Хохол 22</a></p>
-    </div>
+    </address>
 
     <!-- Відгуки -->
     <div class="footer-feedback">
-      <h4>Залиште відгук</h4>
+      <h4>Залиште відгук❤️</h4>
       <a href="https://forms.gle/твій_гугл_форм" target="_blank" class="feedback-btn">Заповнити Google Form</a>
     </div>
 

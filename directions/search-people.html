@@ -38,114 +38,25 @@
         font-size: 2.5rem;
       }
 
-      /* Стилі для каруселі (слайдера) */
-      .carousel {
-        position: relative;
-        max-width: 600px;
-        margin: 2rem auto;
-        overflow: hidden;
-      }
-
-      /* Контейнер для слайдів */
-      .carousel-container {
-        display: flex;
-        transition: transform 0.5s ease-in-out;
-      }
-
-      /* Окремий слайд */
-      .carousel-slide {
-        min-width: 100%;
-        position: relative;
-      }
-
-      /* Зображення в слайді */
-      .carousel-slide img {
-        width: 100%;
-        height: 400px;
-        object-fit: cover;
-        border-radius: 10px;
-      }
-
-      /* Кнопки "вперед" і "назад" */
-      .carousel-button {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        background: rgba(227, 24, 55, 0.8);
-        color: white;
-        padding: 1rem;
-        border: none;
-        cursor: pointer;
-        border-radius: 50%;
-        width: 50px;
-        height: 50px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 1.5rem;
-        z-index: 2;
-        transition: background-color 0.3s;
-      }
-
-      /* Ефект наведення на кнопки */
-      .carousel-button:hover {
-        background: rgba(227, 24, 55, 1);
-      }
-
-      /* Кнопка "назад" (ліворуч) */
-      .carousel-button.prev {
-        left: 10px;
-      }
-
-      /* Кнопка "вперед" (праворуч) */
-      .carousel-button.next {
-        right: 10px;
-      }
-
-      /* Крапки для навігації по слайдах */
-      .carousel-dots {
-        display: flex;
-        justify-content: center;
-        gap: 0.5rem;
-        margin-top: 1rem;
-      }
-
-      /* Окрема крапка */
-      .dot {
-        width: 10px;
-        height: 10px;
-        border-radius: 50%;
-        background: #ccc;
-        cursor: pointer;
-        transition: background-color 0.3s;
-      }
-
-      /* Активна крапка */
-      .dot.active {
-        background: #e31837;
-      }
-
       /* Текст опису */
       .description {
-        font-size: 1.2rem;
+        font-size: 1rem;
         line-height: 1.6;
         color: #333;
         text-align: center;
         margin: 2rem 0;
       }
 
-      /* Секція переваг */
+      /* Секція переваг
       .advantages {
         margin: 3rem 0;
       }
 
-      /* Заголовок секції переваг */
       .advantages h2 {
         color: #1a237e;
         margin-bottom: 1.5rem;
-      }
+      } */
 
-      /* Окрема перевага */
       .advantage-item {
         display: flex;
         align-items: center;
@@ -154,7 +65,6 @@
         color: #333;
       }
 
-      /* Галочка перед перевагою */
       .advantage-item::before {
         content: "✓";
         color: #e31837;
@@ -166,10 +76,10 @@
         margin: 3rem 0;
       }
 
-      /* Заголовок секції */
-      .how-to-get h2 {
-        color: #1a237e;
+      .how-to-get p {
+        color: #0f0f0e;
         margin-bottom: 1.5rem;
+        font-style: italic;
       }
 
       /* Секція контактів */
@@ -177,13 +87,11 @@
         margin: 3rem 0;
       }
 
-      /* Заголовок контактів */
       .contacts h2 {
         color: #1a237e;
         margin-bottom: 1.5rem;
       }
 
-      /* Окремий контакт */
       .contact-item {
         display: flex;
         align-items: center;
@@ -192,7 +100,6 @@
         color: #333;
       }
 
-      /* Іконка контакту */
       .contact-item img {
         width: 24px;
         height: 24px;
@@ -210,14 +117,21 @@
         transition: background-color 0.3s;
       }
 
-      /* Ефект наведення на кнопку "Назад" */
       .back-button:hover {
         background-color: #c41530;
       }
 
-      /* Вирівнювання по центру */
       .text-center {
         text-align: center;
+      }
+
+      /* Зображення */
+      .service-image {
+        width: 100%;
+        max-width: 600px;
+        border-radius: 10px;
+        margin: 0 auto 2rem auto;
+        display: block;
       }
     </style>
   </head>
@@ -227,31 +141,15 @@
         <!-- Шапка сторінки -->
         <div class="service-header">
           <img src="../images/LogoUA.png" alt="Червоний Хрест Логотип" />
-          <h1>Відновлення родинних зв'язків</h1>
+          <h1 class="visually-hidden">Пошук зниклих</h1>
         </div>
 
-        <!-- Карусель із зображеннями -->
-        <div class="carousel">
-          <button class="carousel-button prev">❮</button>
-          <div class="carousel-container">
-            <div class="carousel-slide">
-              <img src="../images/home-care-1.png" alt="Догляд вдома 1" />
-            </div>
-            <div class="carousel-slide">
-              <img src="../images/home-care-2.png" alt="Догляд вдома 2" />
-            </div>
-            <div class="carousel-slide">
-              <img src="../images/home-care-3.png" alt="Догляд вдома 3" />
-            </div>
-          </div>
-          <button class="carousel-button next">❯</button>
-          <!-- Крапки для навігації -->
-          <div class="carousel-dots">
-            <span class="dot active"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
-          </div>
-        </div>
+        <!-- Статичне зображення -->
+        <img
+          src="../images/search.jpg"
+          alt="Відновлення родинних зв’язків"
+          class="service-image"
+        />
 
         <!-- Основний опис -->
         <p class="description">
@@ -273,7 +171,7 @@
         </p>
 
         <!-- Секція переваг -->
-        <div class="advantages">
+        <!-- <div class="advantages">
           <h2>
             Чому варто скористатися послугою відновлення родинних зв’язків
           </h2>
@@ -292,17 +190,17 @@
             та соціальний зв’язок між родичами, надає консультації та підтримку,
             щоб зменшити стрес і тривогу під час очікування новин про близьких.
           </div>
-        </div>
+        </div> -->
 
         <!-- Як отримати допомогу -->
         <div class="how-to-get">
-          <h2>Як отримати послугу</h2>
           <p>
-            Щоб скористатися цією послугою, зверніться за контактами, вказаними
-            нижче. Фахівець надасть всю необхідну інформацію та перелік
-            документів, які потрібно підготувати. Послуга надається онлайн, що
-            дозволяє отримати підтримку та консультації незалежно від місця
-            вашого перебування, швидко і без зайвих формальностей.
+            У разі втрати зв'язку між членами родин, розлучених в наслідок війни
+            в Україні ви можете звернутися до волонтера Служби розшуку ТЧХУ в
+            Волинській обласній організації. Волонтер надасть всю необхідну
+            інформацію та перелік документів, які потрібно підготувати. Послуга
+            надається онлайн, що дозволяє отримати підтримку та консультації
+            незалежно від місця вашого перебування.
           </p>
         </div>
 
@@ -310,11 +208,17 @@
         <div class="contacts">
           <h2>Контакти</h2>
           <div class="contact-item">
-            <a href="tel:+1234567890">+123 456 7890</a>
+            <a href="tel:+380995066535">+38 (099) 506 65 35</a>
           </div>
-          <div class="contact-item">
-            <a href="mailto:info@example.com">info@example.com</a>
-          </div>
+        </div>
+        <div class="advantage-item">
+          <p>
+            Ми дотримуємся принципів конфіденційності та нерозголошення
+            особистої інформації. Допомога надається безкоштовно.
+          </p>
+        </div>
+        <div class="advantage-item">
+          <p>Допомога надається безкоштовно.</p>
         </div>
 
         <!-- Кнопка повернення -->
@@ -325,55 +229,5 @@
         </div>
       </div>
     </div>
-
-    <!-- JavaScript для роботи каруселі -->
-    <script>
-      // Отримуємо елементи каруселі
-      const carousel = document.querySelector(".carousel-container");
-      const slides = document.querySelectorAll(".carousel-slide");
-      const dots = document.querySelectorAll(".dot");
-      const prevButton = document.querySelector(".carousel-button.prev");
-      const nextButton = document.querySelector(".carousel-button.next");
-
-      let currentSlide = 0;
-      const totalSlides = slides.length;
-
-      // Функція оновлення каруселі
-      function updateCarousel() {
-        carousel.style.transform = `translateX(-${currentSlide * 100}%)`;
-
-        // Оновлюємо активну крапку
-        dots.forEach((dot, index) => {
-          dot.classList.toggle("active", index === currentSlide);
-        });
-      }
-
-      // Перехід до наступного слайду
-      function nextSlide() {
-        currentSlide = (currentSlide + 1) % totalSlides;
-        updateCarousel();
-      }
-
-      // Перехід до попереднього слайду
-      function prevSlide() {
-        currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
-        updateCarousel();
-      }
-
-      // Додаємо обробники подій
-      nextButton.addEventListener("click", nextSlide);
-      prevButton.addEventListener("click", prevSlide);
-
-      // Навігація по крапках
-      dots.forEach((dot, index) => {
-        dot.addEventListener("click", () => {
-          currentSlide = index;
-          updateCarousel();
-        });
-      });
-
-      // Автоматична зміна слайдів кожні 5 секунд
-      setInterval(nextSlide, 5000);
-    </script>
   </body>
 </html>
