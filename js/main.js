@@ -107,6 +107,7 @@
 // });
 
 document.addEventListener("DOMContentLoaded", () => {
+  // Функціональність копіювання IBAN
   const copyButtons = document.querySelectorAll(".donation-btn");
 
   if (copyButtons.length > 0) {
@@ -135,6 +136,74 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       });
     });
+  }
+
+  // Функціональність бургер меню
+  const burgerBtn = document.getElementById("burgerMenuBtn");
+  const navBar = document.getElementById("navBar");
+  const navLinks = document.querySelectorAll(".nav-link");
+
+  if (burgerBtn && navBar) {
+    // Створюємо overlay для затемнення фону
+    const overlay = document.createElement("div");
+    overlay.className = "overlay";
+    document.body.appendChild(overlay);
+
+    // Функція відкриття/закриття меню
+    function toggleMenu() {
+      burgerBtn.classList.toggle("active");
+      navBar.classList.toggle("active");
+      overlay.classList.toggle("active");
+      document.body.style.overflow = navBar.classList.contains("active")
+        ? "hidden"
+        : "";
+    }
+
+    // Обробник кліку по бургер кнопці
+    burgerBtn.addEventListener("click", toggleMenu);
+
+    // Обробник кліку по overlay (закриття меню)
+    overlay.addEventListener("click", () => {
+      if (navBar.classList.contains("active")) {
+        toggleMenu();
+      }
+    });
+
+    // Закриття меню при кліку на посилання
+    navLinks.forEach((link) => {
+      link.addEventListener("click", () => {
+        if (navBar.classList.contains("active")) {
+          toggleMenu();
+        }
+      });
+    });
+
+    // Закриття меню при натисканні Escape
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && navBar.classList.contains("active")) {
+        toggleMenu();
+      }
+    });
+
+    // Закриття меню при зміні розміру вікна (якщо стало більше 768px)
+    window.addEventListener("resize", () => {
+      if (window.innerWidth > 768 && navBar.classList.contains("active")) {
+        toggleMenu();
+      }
+    });
+
+    // Перевірка початкового стану при завантаженні сторінки
+    function checkInitialState() {
+      if (window.innerWidth > 768) {
+        // На планшетах та десктопах ховаємо overlay
+        overlay.style.display = "none";
+      } else {
+        overlay.style.display = "block";
+      }
+    }
+
+    // Викликаємо перевірку при завантаженні
+    checkInitialState();
   }
 
   function showToast(message, isError = false) {
