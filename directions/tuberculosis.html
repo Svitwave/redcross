@@ -7,7 +7,7 @@
     <title>Допомога хворим на туберкульоз</title>
     <link rel="stylesheet" href="../css/style.css" />
     <style>
-      /* Основний контейнер сторінки */
+      /* Основний контейнер */
       .service-page {
         background: white;
         border-radius: 20px;
@@ -17,7 +17,7 @@
         box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
       }
 
-      /* Шапка сторінки з логотипом */
+      /* Шапка сторінки */
       .service-header {
         display: flex;
         align-items: center;
@@ -25,109 +25,20 @@
         margin-bottom: 2rem;
       }
 
-      /* Розмір логотипу в шапці */
       .service-header img {
         width: 60px;
         height: 60px;
       }
 
-      /* Заголовок у шапці */
       .service-header h1 {
         color: #1a237e;
         margin: 0;
-        font-size: 2.5rem;
-      }
-
-      /* Стилі для каруселі (слайдера) */
-      .carousel {
-        position: relative;
-        max-width: 600px;
-        margin: 2rem auto;
-        overflow: hidden;
-      }
-
-      /* Контейнер для слайдів */
-      .carousel-container {
-        display: flex;
-        transition: transform 0.5s ease-in-out;
-      }
-
-      /* Окремий слайд */
-      .carousel-slide {
-        min-width: 100%;
-        position: relative;
-      }
-
-      /* Зображення в слайді */
-      .carousel-slide img {
-        width: 100%;
-        height: 400px;
-        object-fit: cover;
-        border-radius: 10px;
-      }
-
-      /* Кнопки "вперед" і "назад" */
-      .carousel-button {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        background: rgba(227, 24, 55, 0.8);
-        color: white;
-        padding: 1rem;
-        border: none;
-        cursor: pointer;
-        border-radius: 50%;
-        width: 50px;
-        height: 50px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 1.5rem;
-        z-index: 2;
-        transition: background-color 0.3s;
-      }
-
-      /* Ефект наведення на кнопки */
-      .carousel-button:hover {
-        background: rgba(227, 24, 55, 1);
-      }
-
-      /* Кнопка "назад" (ліворуч) */
-      .carousel-button.prev {
-        left: 10px;
-      }
-
-      /* Кнопка "вперед" (праворуч) */
-      .carousel-button.next {
-        right: 10px;
-      }
-
-      /* Крапки для навігації по слайдах */
-      .carousel-dots {
-        display: flex;
-        justify-content: center;
-        gap: 0.5rem;
-        margin-top: 1rem;
-      }
-
-      /* Окрема крапка */
-      .dot {
-        width: 10px;
-        height: 10px;
-        border-radius: 50%;
-        background: #ccc;
-        cursor: pointer;
-        transition: background-color 0.3s;
-      }
-
-      /* Активна крапка */
-      .dot.active {
-        background: #e31837;
+        font-size: 2rem;
       }
 
       /* Текст опису */
       .description {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
         line-height: 1.6;
         color: #333;
         text-align: center;
@@ -139,22 +50,20 @@
         margin: 3rem 0;
       }
 
-      /* Заголовок секції переваг */
       .advantages h2 {
         color: #1a237e;
         margin-bottom: 1.5rem;
+        text-align: center;
       }
 
-      /* Окрема перевага */
       .advantage-item {
         display: flex;
-        align-items: center;
-        gap: 1rem;
+        align-items: flex-start;
+        gap: 0.5rem;
         margin-bottom: 1rem;
         color: #333;
       }
 
-      /* Галочка перед перевагою */
       .advantage-item::before {
         content: "✓";
         color: #e31837;
@@ -166,39 +75,49 @@
         margin: 3rem 0;
       }
 
-      /* Заголовок секції */
       .how-to-get h2 {
         color: #1a237e;
-        margin-bottom: 1.5rem;
+        margin-bottom: 1rem;
+        text-align: center;
       }
 
-      /* Секція контактів */
+      .how-to-get p {
+        font-size: 1.1rem;
+        line-height: 1.6;
+        color: #333;
+      }
+
+      /* Контакти */
       .contacts {
         margin: 3rem 0;
       }
 
-      /* Заголовок контактів */
       .contacts h2 {
         color: #1a237e;
         margin-bottom: 1.5rem;
+        text-align: center;
       }
 
-      /* Окремий контакт */
       .contact-item {
         display: flex;
         align-items: center;
         gap: 1rem;
         margin-bottom: 1rem;
         color: #333;
+        justify-content: center;
       }
 
-      /* Іконка контакту */
       .contact-item img {
         width: 24px;
         height: 24px;
       }
 
       /* Кнопка "Назад" */
+      .text-center {
+        text-align: center;
+        margin-top: 2rem;
+      }
+
       .back-button {
         display: inline-block;
         background-color: #e31837;
@@ -206,165 +125,78 @@
         padding: 1rem 2rem;
         border-radius: 25px;
         text-decoration: none;
-        margin-top: 2rem;
         transition: background-color 0.3s;
       }
 
-      /* Ефект наведення на кнопку "Назад" */
       .back-button:hover {
         background-color: #c41530;
-      }
-
-      /* Вирівнювання по центру */
-      .text-center {
-        text-align: center;
       }
     </style>
   </head>
   <body>
     <div class="container">
       <div class="service-page">
-        <!-- Шапка сторінки -->
+        <!-- Шапка -->
         <div class="service-header">
           <img src="../images/LogoUA.png" alt="Червоний Хрест Логотип" />
           <h1>Допомога хворим на туберкульоз</h1>
         </div>
 
-        <!-- Карусель із зображеннями -->
-        <div class="carousel">
-          <button class="carousel-button prev">❮</button>
-          <div class="carousel-container">
-            <div class="carousel-slide">
-              <img src="../images/home-care-1.png" alt="Догляд вдома 1" />
-            </div>
-            <div class="carousel-slide">
-              <img src="../images/home-care-2.png" alt="Догляд вдома 2" />
-            </div>
-            <div class="carousel-slide">
-              <img src="../images/home-care-3.png" alt="Догляд вдома 3" />
-            </div>
-          </div>
-          <button class="carousel-button next">❯</button>
-          <!-- Крапки для навігації -->
-          <div class="carousel-dots">
-            <span class="dot active"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
-          </div>
-        </div>
-
-        <!-- Основний опис -->
+        <!-- Опис -->
         <p class="description">
-          Цей напрямок створений для активної молоді, яка прагне розвиватися та
-          впливати на своє життя та суспільство. Тут проводяться спеціальні
-          сесії та тренінги, де молодь опановує життєві навички (Life Skills),
-          необхідні у сучасному світі: ефективне спілкування, управління часом,
-          критичне мислення, командна робота та прийняття рішень. Програма
-          спрямована на те, щоб допомогти молодим людям ставати впевненими,
-          відповідальними та креативними, готовими реалізовувати власні ідеї та
-          долучатися до соціально важливих проектів.
+          Цей напрямок спрямований на підтримку людей, які живуть із
+          туберкульозом або проходять лікування. Ми допомагаємо отримати
+          необхідну медичну, соціальну та психологічну підтримку, сприяємо
+          підвищенню обізнаності про захворювання та зменшенню стигми в
+          суспільстві.
         </p>
 
-        <!-- Секція переваг -->
+        <!-- Переваги -->
         <div class="advantages">
-          <h2>Чому варто відвідати сесії молоді</h2>
+          <h2>Що ми пропонуємо</h2>
           <div class="advantage-item">
-            Розвиток життєвих навичок, які потрібні у навчанні, роботі та
-            повсякденному житті.
+            Консультації та супровід людей, які проходять лікування.
           </div>
           <div class="advantage-item">
-            Навчання ефективній комунікації та роботі в команді,що допомагає у
-            будь-яких проєктах і соціальних ініціативах.
+            Психосоціальна підтримка та допомога у подоланні стресу.
           </div>
           <div class="advantage-item">
-            Підвищення впевненості та самостійності у прийнятті рішень.
+            Проведення інформаційних заходів і просвітницьких кампаній.
+          </div>
+          <div class="advantage-item">
+            Співпраця з медичними закладами та місцевими громадами.
           </div>
         </div>
 
         <!-- Як отримати допомогу -->
         <div class="how-to-get">
-          <h2>Як взяти участь</h2>
+          <h2>Як отримати допомогу</h2>
           <p>
-            Ви можете домовитися про проведення сесій молодіжних ініціатив у
-            вашому навчальному закладі або громадській організації, звернувшись
-            до нас за контактами, вказаними нижче. Разом ми узгодимо місце, дату
-            та час проведення, а також ознайомимо вас з усіма деталями програми.
-            Сесії підходять для молоді шкільного та студентського віку, а також
-            для всіх, хто прагне розвивати життєві навички та брати участь у
-            цікавих практичних заняттях.
+            Щоб взяти участь у програмі або запросити фахівців Червоного Хреста
+            для проведення заходу у вашому закладі, зверніться до нашої
+            організації або зателефонуйте за номерами, вказаними нижче. Ми
+            надамо всю необхідну інформацію та допоможемо узгодити деталі.
           </p>
         </div>
 
-        <!-- Контактна інформація -->
+        <!-- Контакти -->
         <div class="contacts">
           <h2>Контакти</h2>
           <div class="contact-item">
-            <img src="../images/phone-icon.png" alt="Телефон" />
-            +123 456 7890
+            <a href="+380682104303">+380682104303</a>
           </div>
           <div class="contact-item">
-            <img src="../images/email-icon.png" alt="Email" />
-            info@example.com
+            <a href="mailto:info@example.com">info@example.com</a>
           </div>
         </div>
 
-        <!-- Кнопка повернення -->
+        <!-- Кнопка назад -->
         <div class="text-center">
-          <a href="../index.html" class="back-button"
-            >Повернутися до всіх напрямів</a
-          >
+          <a href="../index.html" class="back-button">
+            Повернутися до всіх напрямів
+          </a>
         </div>
       </div>
     </div>
-
-    <!-- JavaScript для роботи каруселі -->
-    <script>
-      // Отримуємо елементи каруселі
-      const carousel = document.querySelector(".carousel-container");
-      const slides = document.querySelectorAll(".carousel-slide");
-      const dots = document.querySelectorAll(".dot");
-      const prevButton = document.querySelector(".carousel-button.prev");
-      const nextButton = document.querySelector(".carousel-button.next");
-
-      let currentSlide = 0;
-      const totalSlides = slides.length;
-
-      // Функція оновлення каруселі
-      function updateCarousel() {
-        carousel.style.transform = `translateX(-${currentSlide * 100}%)`;
-
-        // Оновлюємо активну крапку
-        dots.forEach((dot, index) => {
-          dot.classList.toggle("active", index === currentSlide);
-        });
-      }
-
-      // Перехід до наступного слайду
-      function nextSlide() {
-        currentSlide = (currentSlide + 1) % totalSlides;
-        updateCarousel();
-      }
-
-      // Перехід до попереднього слайду
-      function prevSlide() {
-        currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
-        updateCarousel();
-      }
-
-      // Додаємо обробники подій
-      nextButton.addEventListener("click", nextSlide);
-      prevButton.addEventListener("click", prevSlide);
-
-      // Навігація по крапках
-      dots.forEach((dot, index) => {
-        dot.addEventListener("click", () => {
-          currentSlide = index;
-          updateCarousel();
-        });
-      });
-
-      // Автоматична зміна слайдів кожні 5 секунд
-      setInterval(nextSlide, 5000);
-    </script>
   </body>
 </html>
